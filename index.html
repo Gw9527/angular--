@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>*****</title>
+    <!--<link rel="icon" href="favicon.ico" type="image/x-icon" />-->
+    <meta name="robots" content="all">
+    <meta name="keywords" content="" />
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/css.css" type="text/css" media="screen" />
+</head>
+<body>
+
+    <div class="ui-top" ng-include src="'tpl/top.html'"></div>
+    <div class="ui-item ui-allcontent-container" style="height:570px;">
+        <div class="ui-nav">
+            <ul>
+                <li>
+                    <a href="#/index" class="ui-nav-active">展</a>
+                </li>
+                <li>
+                    <a href="#/me">我</a>
+                </li>
+            </ul>
+        </div>
+        <div breadnav class="ui-navbread">
+            
+        </div>
+        <div class="ui-content" ui-view="contentView">
+            <div zhanper></div>
+            <!--<div ng-include src="'tpl/kehu/zhanper.html'"></div>-->
+            <div ui-view="threeCols"></div>
+            <!--<div class="ng-nav" ui-view="ui-kehu-nav@index"></div>
+            <div minor class="ng-view" ui-view="ui-content-view@index"></div>-->
+        </div>
+        <div ng-include src="'tpl/bottom.html'"></div>
+    </div>
+    <div class="ui-first-tip" style="display:none;">
+        <span class="ui-first-kehu" ng-click="firstDelShow($event,'ui-first-kehu-del')"></span>
+        <span class="ui-first-kehu-del" style="display:none;" ng-click="firstDelShow($event,'ui-first-kehu-group')"></span>
+        <span class="ui-first-kehu-group" style="display:none;" ng-click="firstDelShow($event,'ui-first-kehu-peradd')"></span>
+        <span class="ui-first-kehu-peradd" style="display:none;" ng-click="firstDelShow($event,'ui-first-hongbao')"></span>
+        <span class="ui-first-hongbao" style="display:none;"  ng-click="firstDelShow($event)"></span>
+    </div>
+
+    
+
+    <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="js/angular-1.3.0.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.js"></script>
+    <script type="text/javascript" src="js/ng-file-upload.js"></script>
+    <!--<script type="text/javascript" src="js/angular-cookies.min.js"></script>-->
+    <script type="text/javascript" src="js/angular-local-storage.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/directives.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    
+</body>
+</html>

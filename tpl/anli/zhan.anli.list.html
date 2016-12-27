@@ -1,0 +1,23 @@
+<div class="ui-kehu-nav">
+    <div class="ui-kehu-title clearfix">
+        <i class="ui-ico-nav"></i>
+    </div>
+    <div class="ui-kehu-list ui-kehu-list-hs2">
+        <span class="erro-tip-text"></span>
+        <ul>
+            <li ng-repeat="anli in anliDatas">
+                <a href="#/anli/{{anli.sid}}">
+                    <span class="ui-form-checkbox"/></span>
+                    <div class="ui-kehu-botbor">
+                        <div class="ui-zhaji-list-title-item">
+                            <span class="ui-zhaji-list-title">{{anli.title}}</span>
+                        </div>
+                        <span class="ui-zhaji-list-btype">{{anli.type}}</span>   
+                        <span class="ui-zhaji-list-des">{{anli.content | limitTo:55}}</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div anliview localsrc="{{argument}}"></div>

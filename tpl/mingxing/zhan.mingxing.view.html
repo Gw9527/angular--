@@ -1,0 +1,45 @@
+<div class="ui-mx-item">
+    <div class="ui-mx-item-tit">
+        <span>{{mingxingMe.name}}</span>
+        <span class="ui-mx-item-tit-li">{{mingxingMe.rankposition}}</span>
+        <span class="ui-mx-item-tit-li">{{mingxingMe.click}}</span>
+        <span class="ui-mx-item-tit-li">{{mingxingMe.updown}}<i class="{{mingxingMe.updown<0?'ui-rand-dowunico':'ui-rand-upico'}}"></i></span>
+        <span class="ui-mx-item-tit-li"><a href="{{mingxingMe.homehouse}}">保屋</a></span>
+    </div>
+</div>
+
+<div class="clearfix">
+    <div class="ui-mx-bang-item">
+        <div class="ui-mx-bang-itemcon">
+            <span class="ui-mx-bang-num">排行榜<em>TOP10</em></span>
+            <table class="ui-mx-table">
+                <tbody>
+                    {{rand}}
+                    <tr ng-repeat="rand in mxTop10">
+                        <td>{{rand.id}}</td>
+                        <td>{{rand.name}}</td>
+                        <td>{{rand.rankposition}}</td>
+                        <td>{{rand.updown}}<i class="{{rand.updown<0?'ui-rand-dowunico':'ui-rand-upico'}}"></i></td>
+                        <td><a href="{{rand.homehouse}}">保屋</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="ui-mx-bang-item">
+        <div class="ui-mx-bang-itemcon">
+            <span class="ui-mx-bang-num">排行榜<em>TOP20</em></span>
+            <table class="ui-mx-table">
+                <tbody>
+                    <tr ng-repeat="rand in mxTop20">
+                        <td>{{rand.id}}</td>
+                        <td>{{rand.name}}</td>
+                        <td>{{rand.rankposition}}</td>
+                        <td>{{rand.updown}}<i class="{{rand.updown<0?'ui-rand-dowunico':'ui-rand-upico'}}"></i></td>
+                        <td><a href="{{rand.homehouse}}">保屋</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

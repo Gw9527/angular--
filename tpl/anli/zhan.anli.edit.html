@@ -1,0 +1,36 @@
+<div class="ui-content-view">
+    <div class="ui-view-content">
+        <div class="ui-per-view clearfix">
+            <span class="erro-tip-text"></span>
+            <form name="myForm">
+                <table class="ui-bw-table">
+                    <tr>
+                        <td class="ui-bw-table-valign">标题</td>
+                        <td><input type="text" name="title" ng-maxlength="25" ng-model="anliSingDatas.title" /></td>
+                    </tr>
+                    <tr>
+                        <td class="ui-bw-table-valign">类型</td>
+                        <td>
+                            <select class="anliSelect">
+                                <option value ="1" ng-selected="anliSingDatas.cate==1?1:''">寿险</option>
+                                <option value ="2" ng-selected="anliSingDatas.cate==2?2:''">财险</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui-bw-table-valign">内容</td>
+                        <td>
+                            <textarea class="ui-bw-table-textarea" style="width:300px" ng-model="anliSingDatas.content"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui-bw-table-valign"></td>
+                        <td>
+                            <input type="submit" class="ui-btn-big ui-position-del" ng-click="editAnli()" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="clearfix">
+    <div class="ui-gz-ban">
+        <div class="ui-gz-ban-cont">
+            <span class="ui-gz-title">已关注</span>
+            <div class="ui-gz-title ui-gz-title-nb">
+                <ul>
+                    <li ng-repeat="listfo in gzlistfo">
+                        <a href="">{{listfo.truename}}&nbsp;&nbsp;赞（{{listfo.good}}）&nbsp;&nbsp;关注（{{listfo.allfolw}}）</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ui-gz-ban">
+        <div class="ui-gz-ban-cont">
+            <span class="ui-gz-title">被关注</span>
+            <div class="ui-gz-title ui-gz-title-nb">
+                <ul>
+                    <li ng-repeat="listfo in gzlistbefo">
+                        <a href="">{{listfo.truename}}&nbsp;&nbsp;赞（{{listfo.good}}）&nbsp;&nbsp;关注（{{listfo.allfolw}}）</a>
+                    </li>
+                </ul>   
+            </div>
+        </div>
+    </div>
+</div>

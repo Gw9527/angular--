@@ -1,0 +1,57 @@
+<div class="ui-content-view">
+    <div class="ui-view-content">
+        <div class="ui-per-view clearfix">
+            <span class="erro-tip-text"></span>
+            <div class="ui-kehu-source-content ui-kehu-source-edit clearfix">
+                <ul>
+                    <li>
+                        <em>*</em><span>姓名</span><input type="text" name="pername" required ng-model="SinglePerData.truename" />
+                    </li>
+                    <li>
+                        <em>*</em><input type="radio" name="persex" value="0" ng-model="SinglePerData.sex" />男&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="persex" value="1" ng-model="SinglePerData.sex" />女
+                    </li>
+                    <li>
+                        <em>*</em><span>手机号</span><input type="text" required name="mobile" ng-model="SinglePerData.tel" />
+                    </li>
+                    <li>
+                        <span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</span><input type="text" name="email" ng-model="SinglePerData.email" />
+                    </li>
+                    <li>
+                        <span>证件类型</span><select class="ui-select ui-m-r" name="cardtype">
+                        <option value ="{{cateofid.id}}" ng-repeat="cateofid in cateofidData" ng-selected="cateofid.id==SinglePerData.credetype?SinglePerData.credetype:''">{{cateofid.cateof}}</option>
+                        </select>
+                        <input type="text" name="cardno" style="width: 368px;" ng-model="SinglePerData.coustmer_uid" />
+                    </li>
+                    <li>
+                        <span>分配群组</span>
+                        <select name="pertype" class="ui-select ui-m-r" >
+                            <!--<option value ="0">请选择</option>  ng-model="SinglePerData.groupid"-->
+                            <option value ="{{group.groupid}}" ng-repeat="group in groupData" ng-selected="group.groupid==SinglePerData.groupid?SinglePerData.groupid:''">{{group.groupname}}</option>
+                        </select>
+                    </li>
+                    <li>
+                        <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业</span><input type="text" name="perjob" ng-model="SinglePerData.job" />
+                    </li>
+                    <li>
+                        <span>QQ</span><input type="text" name="perqq" ng-model="SinglePerData.qq" />
+                    </li>
+                    <li>
+                        <span>详细地址</span><input type="text" name="peraddrd" ng-model="SinglePerData.address" />
+                    </li>
+                    <li>
+                        <span>家庭年收入（万）</span><input type="text" name="permoney" ng-model="SinglePerData.familymoney" style="width:100px" />
+                    </li>
+                    <li>
+                        <span>家庭疾病史</span><input type="text" name="perdisease" ng-model="SinglePerData.familydis" />
+                    </li>
+                    <li style="height:80px">
+                        <span>备 注</span><textarea class="ui-per-textarea" ng-model="SinglePerData.remarks"></textarea>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-m-t"><input type="submit" value="提交" class="ui-btn ui-btn-position" ng-click="perEditSubmit()"></div>
+        
+        </div>
+
+    </div>
+</div>

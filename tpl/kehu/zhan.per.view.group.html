@@ -1,0 +1,24 @@
+<div class="ui-content-view">
+    <div class="ui-view-content">
+        <div class="ui-per-view clearfix">
+            <span class="erro-tip-text"></span>
+            <div class="ui-kehu-source-content ui-kehu-source-edit clearfix">
+                <ul class="ui-group-list">
+                    <li ng-repeat="gpers in groupViewDatas">
+                        <a href="index.html#/kehu/{{gpers.crmid}}">
+                            <div class="ui-kehu-botbor">
+                                <span class="ui-kehu-perioc ui-bg1">{{gpers.truename | limitTo:1}}</span>
+                                <div class="ui-kehu-pername">
+                                    <span class="ui-kehu-pername-title">{{gpers.truename}}</span>
+                                    <span class="ui-kehu-pername-tel">{{gpers.tel}}</span>
+                                </div>
+                                <span class="ui-kehu-type">移除</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>

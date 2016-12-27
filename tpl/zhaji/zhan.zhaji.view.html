@@ -1,0 +1,28 @@
+<div class="ui-content-view">
+    <div class="ui-view-content">
+        <div class="ui-per-view">
+            <span class="ui-zhaji-view-title">{{zhajiSingDatas.title}}</span>
+            <span class="ui-zhaji-view-date">{{zhajiSingDatas.date}}&nbsp;&nbsp;赞({{zhajiSingDatas.good}})</span>
+            <div class="ui-zhaji-view-content">
+                {{zhajiSingDatas.content}}
+            </div>
+            <a class="ui-btn-big" href="#/zhaji/add">写札记</a>
+            <div class="footer-sharing">
+                <div class="sharing">
+                    <span class="sharing-button" ng-mouseover="shareTip()" ng-mouseout="shareTipOut()">分享到微信</span>
+                    <div class="sharing-layer is-hidden" ng-mouseover="shareTip()" ng-mouseout="shareTipOut()">
+                        <div class="sharing-wechat">
+                            <span class="sharing-icon__wechat">微信扫码</span>
+                            <div class="sharing-wechat-qrcode"><img src="{{zhajiSingDatas.shareurlpic}}" alt="扫描二维码"></div>
+                        </div>
+                        <ul class="sharing-list">
+                            <li class="sharing-icon__weibo" data-share="weibo" ng-click="share($event)">新浪微博</li>
+                            <li class="sharing-icon__qq" data-share="qq" ng-click="share($event)">QQ好友</li>
+                            <li class="sharing-icon__qzone" data-share="qzone" ng-click="share($event)">QQ空间</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

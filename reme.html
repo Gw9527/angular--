@@ -1,0 +1,51 @@
+<div class="ui-login-content bg-default">
+    <div class="ui-login-content-inner">
+        <div class="login-welcome" style="display: block;">
+            <div class="login-welcome-title">欢迎来到保宝通2</div>
+            <div class="login-welcome-text">更专业、更快速、更懂你的贴心助手<br><p style="margin-top:10px;">专注保险17年是我们的依靠</p>始终真诚为您服务是我们的承诺</div>
+        </div>
+        
+        <div class="login-pannel">
+            <div class="login-pannel-bg"></div>
+            <div class="login-title">
+                <div class="login-title-bg"></div>
+                <div class="login-title-text">
+                    <span class="text_middle">修改密码</span>
+                </div>
+            </div>
+            <div class="login-wrap">
+                <div class="login-section">
+                    <div class="login-placeholder-input login-username-placeholder-input">
+                        <input type="text" name="name" value="" placeholder="请输入身份证号" class="login-input" autocomplete="off">
+                    </div>
+
+                    <div id="password_wrap" class="login-placeholder-input" style="margin-bottom:10px">
+                        <input type="text" name="zhiye" value="" placeholder="请输入职业证号" class="login-input">
+                    </div>
+                    <div style="clear: both">
+                        <button type="submit" class="login-submit-btn helper-repas" ng-click="getCooki()">确认</button>
+                    </div>
+                    <div class="helper-con" style="display:none;">
+                        <div class="login-placeholder-input login-username-placeholder-input">
+                            <input type="text" name="tel" value="" disabled="disabled" class="login-input">
+                        </div>
+                        <div class="login-placeholder-input login-username-placeholder-input">
+                            <input type="text" name="code" value="" placeholder="请输入验证码" style="width: 45%;float: left;" class="login-input">
+                            <button type="submit" class="login-submit-btn" style="  width: 45%;float: right;padding: 0;" ng-click="getCookis()">获取验证码</button>
+                        </div>
+                        <div class="login-placeholder-input login-username-placeholder-input">
+                            <input type="password" name="pas" value="" placeholder="请输入新密码" class="login-input">
+                        </div>
+                        <div class="login-placeholder-input login-username-placeholder-input">
+                            <input type="password" name="repas" value="" placeholder="再次确认密码" class="login-input">
+                        </div>
+                        <div style="clear: both">
+                            <button type="submit" class="login-submit-btn" ng-click="putlogins()">登录</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

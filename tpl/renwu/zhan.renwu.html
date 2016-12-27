@@ -1,0 +1,25 @@
+<div class="ui-kehu-nav">
+    <div class="ui-kehu-title clearfix">
+        <i class="ui-ico-nav"></i>
+    </div>
+    <!--<div class="ui-kehu-list-title">2015年8月4日</div>-->
+    <div class="ui-kehu-list ui-kehu-list-hs2">
+        <span class="erro-tip-text"></span>
+        <ul>
+            <li ng-repeat="pers in daily">
+                <a href="index.html#/renwu/{{pers.missionid}}">
+                    <input class="ui-form-checkbox" type="checkbox" name="kehu-check" />
+                    <div class="ui-kehu-botbor">
+                        <span class="ui-kehu-perioc ui-kehu-perioc-img ui-bg{{pers.missionid%5}}"></span>
+                        <div class="ui-kehu-pername">
+                            <span class="ui-kehu-pername-title" ng-click="test('{{pers}}');">{{pers.missiontitle}}</span>
+                            <span class="ui-kehu-pername-tel">{{pers.missiondesc  | limitTo:13}}</span>
+                        </div>
+                        <span class="ui-kehu-type">{{pers.missionvalue}}积分</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div mion></div>

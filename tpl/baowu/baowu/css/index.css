@@ -1,0 +1,385 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	
+}
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+menu, 
+nav, 
+section {
+	display: block;
+}
+ol, 
+ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table.pad td {
+	padding: 10px;
+}
+pre, code {
+	display: block;
+	max-width: 100%;
+	font: 12px/24px Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", 						Courier, monospace;
+	margin:0 0 20px 0;
+	padding: 10px;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+.clearfix:after { content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { zoom:1; }
+.overflow-hidden{overflow: hidden;}
+
+
+
+.zd-fixed{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.zd-headbar{
+	width:100%;
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #eaeaea;
+	line-height: 30px;
+	color:#6c6c6c;
+	font-size:0.72222em;
+	text-align: right;
+}
+.zd-nav-con{background:#fff;width:100%;box-shadow:0 1px 1px #ccc;z-index: 2;}
+.zd-nav-l,.zd-nav{
+	float: left;
+}
+.zd-nav-l{
+	font-family: "GungSeo";
+	padding-top: 0.8em;
+	margin-right: 1.5em;
+	font-size: 1.4em;
+}
+.zd-nav{
+	font-weight: bold;
+}
+.zd-nav ul li{
+	float: left;
+}
+.zd-nav-line{
+	display: block;
+	height:2px;
+	background-color: #FF9933;
+	visibility: hidden;
+}
+.zd-nav-active{
+	visibility: visible;
+}
+.zd-nav-title{
+	display: block;
+	padding: 1.5em 1em 1.1em 1em;
+	color: #333;
+	text-decoration: none;
+}
+
+.zd-banner{
+	width: 100%;
+	background-color: #63ea94;
+	position: relative;
+}
+.zd-banner img{
+	max-width: 100%;
+	display: block;
+}
+.zd-banner li div{
+	font-size: 130px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 1px 0px #009807, 1px 2px #006705, 3px 1px #009807, 2px 3px #006705, 4px 2px #009807, 4px 4px #006705, 5px 3px #009807, 5px 5px #006705, 7px 4px #009807, 6px 6px #006705, 8px 5px #009807, 7px 7px #006705, 9px 6px #009807, 9px 8px #006705, 11px 7px #009807, 10px 9px #006705, 12px 8px #009807, 11px 10px #006705, 13px 9px #009807, 12px 11px #006705, 15px 10px #009807, 13px 12px #006705, 16px 11px #009807, 15px 13px #006705, 17px 12px #009807;
+  font-family: "microsoft yahei";
+}
+
+/* 效果CSS开始 */
+.mBan2 { overflow: hidden; }
+.mBan2 .slideBox{ width:100%; height:auto; position:relative; }
+.mBan2 .slideBox .hd{ height: 10px; overflow: hidden; position: absolute; bottom: 4px; z-index: 1; width: 81px; margin-left: -46px; left: 50%; padding: 4px 0px 0px 11px; }
+.mBan2 .slideBox .hd ul{ zoom: 1; }
+.mBan2 .slideBox .hd ul li{ float: left; width: 6px; height: 6px; background: url(../img/btn1.png) no-repeat; cursor: pointer; margin-right: 10px; }
+.mBan2 .slideBox .hd ul li.on{ background: url(../img/btn2.png) no-repeat; }
+.mBan2 .slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.mBan2 .slideBox .bd ul,.slideBox .bd ul li{width:100%!important}
+.mBan2 .slideBox .bd img{ width:100%; height:auto; display:block;  }
+/* 效果CSS结束 */
+
+
+@media screen and (max-width: 640px){
+	.zd-nav-l{
+		display: none;
+	}
+	.zd-nav-title{
+		padding: 1.5em 0.8em 1.1em 0.8em;
+	}
+}
+
+/*产品*/
+.zd-cols3{
+	width: 33.3333333%;
+	float: left;
+	padding-right: 1em;
+	padding-top: 3em;
+	height: 10em;
+	box-sizing: border-box;
+}
+.zd-pro-img{
+	width: 132px;
+	height: 132px;
+	border-radius:66px;
+	float: left;
+	background-color: #339966;
+	text-align: center;
+	padding-top: 11px;
+	margin-right: 1em;
+	-webkit-transform: scale(0);
+	box-sizing: border-box;
+
+}
+.zd-pro .zd-pro-img{
+	-webkit-animation:imgs 0.5s ease-out;
+	-moz-animation:imgs 0.5s ease-out;
+	-o-animation:imgs 0.5s ease-out;
+}
+.zd-pro .zd-pro-img,.zd-team-h5 .zd-pro-img{
+	-webkit-transform: scale(1);
+	-webkit-transition:all .5s  ease-out;
+	-moz-transform: scale(1);
+	-moz-transition:all .5s  ease-out;
+	-o-transform: scale(1);
+	-o-transition:all .5s  ease-out;
+}
+.zd-pro-con{
+	color:#666;
+}
+.zd-pro .zd-pro-con{
+	-webkit-animation:imgs 0.5s ease-out,words 1s ease-out;
+	-moz-animation:imgs 0.5s ease-out,words 1s ease-out;
+	-o-animation:imgs 0.5s ease-out,words 1s ease-out;
+}
+.zd-pro-title{
+	font-weight: bold;
+	margin: 1.5em 0 0.8em 0;
+}
+.zd-pro-des{
+	font-size: 0.8em;
+	line-height: 1.3em;
+}
+.zd-cols3:nth-child(3n){
+	margin-right: 0em;
+}
+@-webkit-keyframes imgs{
+	0%{
+		-webkit-transform: scale(0.1);
+	}
+}
+@-moz-keyframes imgs{
+	0%{
+		-moz-transform: scale(0.1);
+	}
+}
+@-o-keyframes imgs{
+	0%{
+		-o-transform: scale(0.1);
+	}
+}
+@-webkit-keyframes words{
+	0%{
+		opacity: 0;
+	}
+}
+@-moz-keyframes words{
+	0%{
+		opacity: 0;
+	}
+}
+@-o-keyframes words{
+	0%{
+		opacity: 0;
+	}
+}
+@media screen and (max-width: 1000px){
+	.zd-pro-img{
+		display: none;
+	}
+}
+/*竖屏*/
+@media screen and (orientation : portrait){
+	.zd-cols3{
+		width: 100%;
+		padding-top: 0.5em;
+		padding-left: 0.8em;
+		padding-right: 0.8em;
+	}
+}
+@media screen and (orientation : landscape) and (max-width: 1024px){
+	.zd-cols3{
+		width: 50%;
+		padding-left:0.8em;
+		padding-right: 0.8em;
+		padding-top: 1em;
+	}
+} 
+
+@media screen and (orientation : portrait) and (max-width: 768px){
+	.zd-cols3{
+		width: 50%;
+		padding-left:0.8em;
+		padding-right: 0.8em;
+		padding-top: 1em;
+	}
+} 
+
+/*团队*/
+.zd-gray{
+	background-color: #444;
+	width: 100%;
+	margin-top: 3em;
+	padding-bottom: 3em;
+}
+.zd-team .zd-pro-img{
+	padding-top: 6px;
+	background-color: transparent;
+	box-shadow: 1px 0 2px #fff;
+}
+.zd-team .zd-pro-img img{
+	width:120px;
+}
+.zd-team .zd-pro-con{
+	color: #eaeaea;
+}
+.zd-team .zd-pro-des{
+	color: #7e7e7e;
+}
+.zd-team .zd-cols3:nth-child(2) .zd-pro-img{
+	box-shadow: -1px 0 2px #fff;
+}
+.zd-team .zd-cols3:nth-child(3) .zd-pro-img{
+	box-shadow: 0 -1px 2px #fff;
+}
+.zd-team .zd-cols3:nth-child(4) .zd-pro-img{
+	box-shadow: 0 1px 2px #fff;
+}
+.zd-team .zd-cols3:nth-child(6) .zd-pro-img{
+	box-shadow: 0 1px 2px #fff;
+}
+.zd-line-title,
+.zd-line-title-white{
+	max-width: 374px;
+	margin-top: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.5em;
+	text-align: center;
+	color:#fff;
+	padding-top: 1.6em;
+	font-weight: bold;
+}
+.zd-line{
+	height: 11px;
+	background: url('../img/ico.png') no-repeat;
+	display: block;
+	margin-top:0.8em;
+	background-size: cover;
+}
+.zd-line-title-white{
+	color:#000;
+	font-weight: bold;
+	margin-top: 1em;
+}
+.zd-line-title-white .zd-line{
+	background-position: 0 -17px;
+}
+/*job*/
+.zd-job{
+	margin-top:2em;
+	line-height: 1.7em;
+	font-size: 0.9em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	-opacity: 0;
+}
+.zd-jobs:nth-child(1){
+	opacity: 1;
+	-webkit-transition:opacity .5s ease-out;
+	-moz-transition:opacity .5s ease-out;
+	-o-transition:opacity .5s ease-out;
+}
+.zd-jobs:nth-child(2){
+	opacity: 1;
+	-webkit-transition:opacity .5s 0.3s ease-out;
+	-moz-transition:opacity .5s 0.3s ease-out;
+	-o-transition:opacity .5s 0.3s ease-out;
+}
+.zd-jobs:nth-child(3){
+	opacity: 1;
+	-webkit-transition:opacity .5s 0.8s ease-out;
+	-moz-transition:opacity .5s 0.8s ease-out;
+	-o-transition:opacity .5s 0.8s ease-out;
+}
+.zd-job h4{
+	margin-bottom: 1em;
+	font-size: 1.1em;
+}
+.zd-abouts .zd-job{
+	color:#ccc;
+}
+
+.zd-about{
+	margin-top:2em;
+	line-height: 1.7em;
+	font-size: 0.9em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	color: #eaeaea;
+}
+.zd-about h2{
+	font-size: 1.3em;
+	margin-bottom: 0.6em;
+	margin-top:1.3em;
+}
+.zd-foot{
+	padding-bottom: 1em;
+}
+.zd-foot-tit{
+	font-size: 0.9em;
+	text-align: center;
+	padding-top: 1em;
+	color:#666;
+}
+
+
+
+
+
+
+
+
+

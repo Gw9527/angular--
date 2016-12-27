@@ -1,0 +1,30 @@
+<div class="ui-content-view">
+    <div class="ui-view-content">
+        <div class="ui-per-view clearfix">
+            <span class="ui-kehu-periocbig ui-bg{{SinglePerData.crmid%6}}">{{SinglePerData.truename | limitTo:1}}</span>
+            <div class="ui-kehu-source">
+                <div class="ui-kehu-source-title">
+                    {{SinglePerData.truename}}<span>{{sex[SinglePerData.sex]}}</span>
+                </div>
+                <div class="ui-kehu-source-content clearfix">
+                    <ul>
+                        <li><span>手机号码</span>{{SinglePerData.tel}}</li>
+                        <li><span>邮箱</span>{{SinglePerData.email}}</li>
+                        <li><span>证件号</span>{{SinglePerData.coustmer_uid}}</li>
+                        <li><span>出生日期</span>{{SinglePerData.birthdayyear}}-{{SinglePerData.birthdaymonth}}-{{SinglePerData.birthdayday}}</li>
+                        <li><span>职    业</span>{{SinglePerData.job}}</li>
+                        <li><span>QQ</span>{{SinglePerData.qq}}</li>
+                        <li><span>详细地址</span>{{SinglePerData.address}}</li>
+                        <li><span>家庭年收入（万）</span>{{SinglePerData.familymoney}}</li>
+                        <li><span>家庭疾病史</span>{{SinglePerData.familydis}}</li>
+                        <li><span>备        注</span>{{SinglePerData.crmmemo}}</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="ui-kehu-source-editbtn" href="index.html#/kehu/edit/{{SinglePerData.crmid}}">编辑</a>
+        </div>
+
+        <div ng-include src="'tpl/kehu/zhan.per.add.html'"></div>
+        
+    </div>
+</div>

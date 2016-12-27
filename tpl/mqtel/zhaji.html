@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>*****</title>
+    <!--<link rel="icon" href="favicon.ico" type="image/x-icon" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no"> 
+    <meta name="robots" content="all">
+    <meta name="keywords" content="" />
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../../css/css.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" />
+</head>
+<body>
+<!-- 菜单 -->
+<div class="sam-nav clearfix" id="nav">
+    <div class="sam-nav-left">
+        职业证号：14231199426583456
+    </div>
+    <div class="sam-nav-middle">
+        <ul class="clearfix">
+            <li class="sam-nav-hover">札记</li>
+        </ul>
+    </div>
+    <!--<div class="sam-nav-right">
+        <em class="sam-nav-tel"></em>
+        <em class="sam-nav-erweima"></em>
+    </div>-->
+</div>
+<!-- 案例内容 -->
+<div class="sam-item sam-bgcolor" id="renzheng">
+    <div class="sam-item-fixed">
+        <div class="sam-item-white">
+            <div class="sam-item-single-title">
+                <i class="sam-anli sam-anli-one"></i>札记的标题
+            </div>
+            <div class="sam-item-single-content">
+                <p>承保年龄：46-50周岁，保障期限：30年，主险基本保额：10万元（2200 元起），缴费年限：10年，承保职
+                业：除拒保职业。主险基本保额：10万元（2200 元起），缴费年限：10年，承保职业：除拒保职业。</p>
+                <p>承保年龄：46-50周岁，保障期限：30年，主险基本保额：10万元（2200 元起），缴费年限：10年，承保职
+                业：除拒保职业。主险基本保额：10万元（2200 元起），缴费年限：10年，承保职业：除拒保职业。承保年龄：
+                46-50周岁，保障期限：30年，主险基本保额：10万元（2200 元起），缴费年限：10年，承保职业：除拒保职业。
+                主险基本保额：10万元（2200 元起），缴费年限：10年，承保职业：除拒保职业。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 底部 -->
+<div class="sam-item sam-bgcolor2">
+    <div class="sam-item-fixed">
+        <div class="clearfix">
+            <div class="sam-two-item">
+                <ul>
+                    <li class="sam-two-title">保宝通</li>
+                    <li>保宝通上线了，喝着茶就能完成陌拜</li>
+                    <li>展业功能多样却不复杂</li>
+                    <li>源自真诚，服务全国</li>
+                </ul>
+            </div>
+            <div class="sam-two-item">
+                <ul>
+                    <li class="sam-two-title">联系方式</li>
+                    <li>蜘蛛侠</li>
+                    <li>职业证号：14231199426583456</li>
+                    <li>电话号码：<a href="tel:18345678901">18345678901</a></li>
+                    <li>邮箱地址：example@xx.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sam-share">
+        <a href="#" class="sam-share-ico sam-share-sina"></a>
+        <a href="#" class="sam-share-ico sam-share-qq"></a>
+        <a href="#" class="sam-share-ico sam-share-weibo"></a>
+    </div>
+</div>
+<div class="sam-item sam-bgcolor2" style="margin-top:2px;padding:20px 0;color:#fff;text-align:center;">
+    <div class="sam-item-fixed clearfix">©2015 中电愿望（北京）科技有限公司</div>
+</div>
+<script type="text/javascript" src="../../js/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+    /*自定义cookie*/
+    /*(function ($) {
+        if (!$.setCookie) {
+            $.extend({
+                setCookie: function (c_name, value, exdays) {
+                    try {
+                        if (!c_name) return false;
+                        var exdate = new Date();
+                        exdate.setDate(exdate.getDate() + exdays);
+                        var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+                        document.cookie = c_name + "=" + c_value;
+                    }
+                    catch (err) {
+                        return '';
+                    };
+                    return '';
+                }
+            });
+        };
+        if (!$.getCookie) {
+            $.extend({
+                getCookie: function (c_name) {
+                    try {
+                        var i, x, y,
+                            ARRcookies = document.cookie.split(";");
+                        for (i = 0; i < ARRcookies.length; i++) {
+                            x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+                            y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+                            x = x.replace(/^\s+|\s+$/g, "");
+                            if (x == c_name) return (y);
+                        };
+                    }
+                    catch (err) {
+                        return '';
+                    };
+                    return '';
+                }
+            });
+        };
+    })(jQuery);*/
+    /*菜单定位*/
+    var navTop = $('#nav').offset().top;
+    $(document).scroll(function(){
+        var scroll = $(document).scrollTop();
+        if(scroll>navTop){
+            $('#nav').addClass('sam-nav-scroll');
+        }else{
+            $('#nav').removeClass('sam-nav-scroll');
+        }
+    });
+    /*地址信息*/
+    function getQueryString(name) { 
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+        var r = window.location.search.substr(1).match(reg); 
+        if (r != null) return unescape(r[2]); return null; 
+    } 
+    /*获取保屋信息*/
+    var bwData = '';
+    $.post('http://api.xiuyetang.com/router.php',{
+        method:'api.ext.bbw.social.homeread',
+        token: JSON.parse(decodeURIComponent(localStorage['ls.BAOBAOTONG'])).token,
+        uid: JSON.parse(decodeURIComponent(localStorage['ls.BAOBAOTONG'])).uid,
+        hid: getQueryString('hid')
+    },function(data){
+        var data = JSON.parse(data);
+        if(data.status){
+            bwData = data.data;
+            $('.sam-mes-center li').eq(0).find('span').eq(1).html(bwData.good);
+        }
+    });
+    /*赞和关注*/
+    /*$('.sam-mes-center li').each(function(i,o){
+        $(o).click(function(){
+            if(i == 0){
+                //console.log(typeof JSON.parse(decodeURIComponent($.getCookie('BAOBAOTONG'))));
+                $.post('http://api.xiuyetang.com/router.php',{
+                    method:'api.ext.bbw.social.gooding',
+                    token: JSON.parse(decodeURIComponent(localStorage['ls.BAOBAOTONG'])).token,
+                    uid: JSON.parse(decodeURIComponent(localStorage['ls.BAOBAOTONG'])).uid,
+                    goodcate: 1,
+                    clickid: bwData.hid || bwData.uid //不知道如何获取保屋的id
+                },function(data){
+                    var data = JSON.parse(data);
+                    if(data.status){
+                        $(o).find('span').eq(1).html(data.data.goodcate);
+                    }
+                });
+            }else{
+                $.post('http://api.xiuyetang.com/router.php',{
+                    method:'api.ext.bbw.social.follow',
+                    token: JSON.parse(decodeURIComponent(localStorage['ls.BAOBAOTONG'])).token,
+                    uid: JSON.parse(decodeURIComponent(localStorage['ls.BAOBAOTONG'])).uid,
+                    followid: bwData.hid//被关注人的id
+                },function(data){
+                    var data = JSON.parse(data);
+                    if(data.status){
+                        console.log(data);
+                        //$(o).find('span').eq(1).html(data.data.goodcate);
+                    }
+                });
+            }
+        });
+    });*/
+</script>
+</body>
+</html>

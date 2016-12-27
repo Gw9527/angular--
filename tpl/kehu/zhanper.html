@@ -1,0 +1,48 @@
+<div class="ui-kehu-nav" ng-controller="zhanpers">
+    <div class="ui-kehu-title clearfix">
+        <i class="ui-ico-nav"></i>
+        <input type="search" placeholder="搜索" name="kehu-search" class="ui-kehu-search" hidden />
+        <span class="ui-kehu-edit" ng-click="deletPer()">编辑</span>
+    </div>
+    <div class="ui-kehu-tab" ng-click="kehuTabs($event.target)" ng-controller="kehuTab">
+        <ul>
+            <li class="ui-kehu-tab-active" data-index="0">通讯录</li>
+            <li data-index="1">群组</li>
+        </ul>
+    </div>
+    <div class="ui-kehu-list ui-kehu-list-hs" data-deltype="person">
+        <span class="erro-tip-text"></span>
+        <ul>
+            <li ng-repeat="pers in viewPerData">
+                <a class="ui-parent-class" data-href="index.html#/kehu/{{pers.crmid}}" ng-click="checkactive($event)">
+                    <input class="ui-form-checkbox" type="checkbox" name="kehu-check" value="{{pers.crmid}}" />
+                    <div class="ui-kehu-botbor">
+                        <span class="ui-kehu-perioc ui-bg{{pers.crmid%6}}">{{pers.truename | limitTo:1}}</span>
+                        <div class="ui-kehu-pername">
+                            <span class="ui-kehu-pername-title">{{pers.truename}}</span>
+                            <span class="ui-kehu-pername-tel">{{pers.tel}}</span>
+                        </div>
+                        <span class="ui-kehu-type">{{pers.type}}</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="ui-kehu-list ui-kehu-list-hs" data-deltype="group" style="display:none;">
+        <span class="erro-tip-text"></span>
+        <ul>
+            <li ng-repeat="group in groupData">
+                <a class="ui-parent-class" data-href="index.html#/group/{{group.groupid}}" ng-click="checkactive($event)">
+                    <input class="ui-form-checkbox" type="radio" name="kehu-check" value="{{group.groupid}}" />
+                    <div class="ui-kehu-botbor">
+                        <span class="ui-kehu-perioc ui-bg{{group.groupid%5}}">群</span>
+                        <div class="ui-kehu-pername">
+                            <span class="ui-kehu-pername-title ui-pergroup-title">{{group.groupname}}</span>
+                        </div>
+                        <span class="ui-kehu-type ui-kehu-count">{{group.count}}</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

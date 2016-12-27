@@ -1,0 +1,43 @@
+<!--<script type="text/javascript" src="../../../js/ng-file-upload.js"></script>-->
+<div class="ui-content-view">
+    <div class="ui-view-content">
+        <div class="ui-per-view clearfix">
+            <span class="erro-tip-text"></span>
+            <form name="a">
+            <table class="ui-bw-table">
+                <tr>
+                    <td class="ui-bw-table-valign">标题</td>
+                    <td><input type="text" name="title" required ng-model="cangkuSingDatas.title" /></td>
+                </tr>
+                <tr>
+                    <td class="ui-bw-table-valign">单价</td>
+                    <td><input type="text" name="price" required ng-model="cangkuSingDatas.value" /></td>
+                </tr>
+                <tr>
+                    <td class="ui-bw-table-valign">库存</td>
+                    <td><input type="text" name="kucun" required ng-model="cangkuSingDatas.number" /></td>
+                </tr>
+                <tr>
+                    <td class="ui-bw-table-valign">图片</td>
+                    <td>
+                        <!--<input type="file" id="ssssss" name="uploadedfile" accept="image/*">-->
+                        <input id="uploadedfile" name="uploadedfile" type="file" ng-model="cangkuSingDatas.pic" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ui-bw-table-valign">描述</td>
+                    <td>
+                        <textarea name="addproduct" ng-model="cangkuSingDatas.info"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ui-bw-table-valign"></td>
+                    <td>
+                        <input type="submit" style="margin-left: 0px;" class="ui-btn ui-btn-position ui-position-del" ng-click="cangkuEdit();" />
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>

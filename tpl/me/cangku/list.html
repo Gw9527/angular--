@@ -1,0 +1,25 @@
+<div class="ui-kehu-nav">
+    <div class="ui-kehu-title clearfix">
+        <i class="ui-ico-nav"></i>
+        <span class="ui-kehu-edit" ng-click="deletPer()">编辑</span>
+    </div>
+    <div class="ui-kehu-list ui-kehu-list-hs2" data-deltype="kucun">
+        <span class="erro-tip-text"></span>
+        <ul>
+            <li ng-repeat="kc in kucunDataS">
+                <a  class="ui-parent-class" data-href="#/me/cangku/{{kc.id}}" ng-click="checkactive($event)">
+                    <input class="ui-form-checkbox" type="checkbox" name="kehu-check" value="{{kc.id}}" />
+                    <div class="ui-kehu-botbor">
+                        <span class="ui-kehu-perioc ui-kehu-perioc-img ui-bg{{kc.id%5}}"><img src="{{kc.pic}}" width="40" height="40" /></span>
+                        <div class="ui-kehu-pername">
+                            <span class="ui-kehu-pername-title">{{kc.title}}</span>
+                            <span class="ui-kehu-pername-tel">库存:{{kc.number}}</span>
+                        </div>
+                        <span class="ui-kehu-type">{{kc.value}}元</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div cangku  localsrc="{{argument}}"></div>

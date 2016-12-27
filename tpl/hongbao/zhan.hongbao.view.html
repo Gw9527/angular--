@@ -1,0 +1,87 @@
+<div class="ui-mx-item-left">
+    <div class="ui-mx-item-left-top">
+        <span class="ui-mx-item-title">我的元宝（积分）</span>
+        <h1 class="ui-mx-item-jf">{{usersocre}}</h1>
+    </div>
+    <div class="ui-mx-item-left-btn">
+        <span class="ui-hb-dx" ng-click="dingXiang(1);" >定向</span>
+        <span class="ui-hb-dx" ng-click="buDingXiang(0);" >不定向</span>
+    </div>
+</div>
+<div class="ui-hb-right">
+    <div id="ui-hb-viewlist">
+        <div class="ui-hb-add ui-hb-listview clearfix">
+            <ul class="clearfix">
+                <li class="ui-hb-wupin">物品</li>
+                <li class="ui-hb-price">单价(元)</li>
+                <li class="ui-hb-price">库存</li>
+            </ul>
+            <ul class="clearfix" ng-repeat="list in woodlist">
+                <li class="ui-hb-wupin">
+                    {{list.title}}
+                </li>
+                <li class="ui-hb-price ui-hb-color">¥{{list.value}}</li>
+                <li class="ui-hb-price ui-hb-color">{{list.number}}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 人物列表 -->
+    <div class="ui-hb-add ui-hb-user" style="display:none;">
+        <ul class="clearfix">
+            <li ng-repeat="pers in viewPerData"><input type="radio" name="woodid" value="{{pers.crmid}}" />{{pers.truename}}</li>
+        </ul>
+        <div><span class="ui-btn ui-btn-position" ng-click="submitTrue()">确定</span></div>
+    </div>
+    <!--<div class="ui-bd-type" style="display:none;">
+        <span ng-click="bdxType('weixin')">微信</span>
+        <span ng-click="bdxType('weibo')">新浪</span>
+        <span ng-click="bdxType('qq')">QQ好友</span>
+        <span ng-click="bdxType('qzone')">QQ空间</span>
+    </div>-->
+    <div class="ui-hb-add ui-hb-addHb clearfix" style="display:none;" id="ui-hb-add">
+        <ul class="clearfix">
+            <li class="ui-hb-check"></li>
+            <li class="ui-hb-wupin">物品</li>
+            <li class="ui-hb-price">单价(元)</li>
+            <li class="ui-hb-price">库存</li>
+            <li class="ui-hb-price">个数</li>
+        </ul>
+        <div class="ui-wood-append">
+            <span class="erro-tip-text erro-tip-textHB"></span>
+            <!--<ul class="clearfix">
+                <li class="ui-hb-wupin">
+                    <select class="ui-hb-select" ng-change="dxChange(selectedOption)" ng-model="selectedOption">
+                        <option value="{{lists.woodid}}" ng-repeat="lists in optionwood">{{lists.title}}</option>
+
+                    </select>
+                </li>
+                <li class="ui-hb-price ui-hb-prices">¥{{woodlist[0].value}}</li>
+                <li class="ui-hb-price ui-hb-num">{{woodlist[0].number}}</li>
+                <li class="ui-hb-price"><input class="ui-hb-input" type="text" value="1" /></li>
+            </ul>-->
+            <ul class="hongbaobox clearfix" ng-repeat="list in woodlist" style="display:none;">
+                <li class="ui-hb-check"><input type="checkbox" name="hbwoodid" data-num="1" value="{{list.id}}" /></li>
+                <li class="ui-hb-wupin">{{list.title}}</li>
+                <li class="ui-hb-price ui-hb-color">¥{{list.value}}</li>
+                <li class="ui-hb-price ui-hb-color">{{list.number}}</li>
+                <li class="ui-hb-price"><input class="ui-hb-input" type="text" value="1" ng-blur="blurCheckNum($event,list.number)" ng-focus="focusSlectedInput($event)" /></li>
+            </ul>
+            <ul class="hongbaoradio clearfix" ng-repeat="list in woodlist" style="display:none;">
+                <li class="ui-hb-check"><input type="radio" name="hbwoodid" value="{{list.id}}" /></li>
+                <li class="ui-hb-wupin">{{list.title}}</li>
+                <li class="ui-hb-price ui-hb-color">¥{{list.value}}</li>
+                <li class="ui-hb-price ui-hb-color">{{list.number}}</li>
+                <li class="ui-hb-price">1</li>
+            </ul>
+        </div>
+        <!--<div class="ui-hb-addbtn" style="display:none" ng-click="bdAddWood()">添加</div>-->
+        <input type="submit" value="提交" class="ui-btn ui-btn-position" ng-click="submitHb()" />
+    </div>
+    <div class="ui-hb-add ui-hb-hbPic" style="display:none;">
+        <img src="{{hbPic}}" />
+    </div>
+</div>
+
+
+
+
